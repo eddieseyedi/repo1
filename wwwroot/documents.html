@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOA Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header, footer {
+            background: #0077cc;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .document-category {
+            margin-bottom: 40px;
+        }
+
+        .document-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .document-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+            .document-card h3 {
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 1.1em;
+            }
+
+            .document-card p {
+                margin: 0 0 10px 0;
+                color: #555;
+                font-size: 0.95em;
+            }
+
+            .document-card a {
+                color: #0077cc;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .document-card a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HOA Documents</h1>
+    </header>
+
+    <main>
+        <p style="text-align:center; margin-bottom:40px;">
+            Welcome! Here you can find important HOA documents, including meeting minutes, financial reports, and forms. Click the links below to download.
+        </p>
+
+        <!-- Covenants and Restrictions -->
+        <div class="document-category">
+            <h2>Covenants and Restrictions</h2>
+            <div class="document-list">
+                <div class="document-card">
+                    <h3>Covenants and Restrictions</h3>
+                    <p>PDF | 43 pages</p>
+                    <a href="documents/Covenants and Restrictions.pdf" target="_blank">Download</a>
+                </div>
+                <div class="document-card">
+                    <h3>Covenants and Restrictions 2</h3>
+                    <p>PDF | 62 pages</p>
+                    <a href="documents/Covenants and Restrictions 2.pdf" target="_blank">Download</a>
+                </div>
+                <div class="document-card">
+                    <h3>Covenants and Restrictions 3</h3>
+                    <p>PDF | 53 pages</p>
+                    <a href="documents/Covenants and Restrictions 3.pdf" target="_blank">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="document-category">
+            <h2>Forms</h2>
+            <div class="document-list">
+                <div class="document-card">
+                    <h3>ACH Form</h3>
+                    <p>PDF | 1 pages</p>
+                    <p>ACH form is not avaialbe at this time.</p>
+<!--                    <a href="documents/ACH Form.docx" target="_blank">Download</a> -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
