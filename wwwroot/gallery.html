@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Situs Place HOA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 60px;
+            max-width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 5px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        /* Main content */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0077cc;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #0077cc;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+            .logo {
+                height: 50px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 8px 0;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+
+            .gallery-item img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html"><img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Community Gallery</h1>
+        <p>Take a look at some photos from our neighborhood events and community improvements.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/gallery1.jpg" alt="Neighborhood Event 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery2.jpg" alt="Neighborhood Event 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery3.jpg" alt="Neighborhood Event 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery4.jpg" alt="Community Project">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery5.jpg" alt="Holiday Decorations">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery6.jpg" alt="Park Area">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+    </footer>
+</body>
+</html>
