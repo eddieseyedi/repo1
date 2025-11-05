@@ -1,132 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Situs Place HOA</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Situs Place HOA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
 
-        /* Header & Navigation */
-        header {
-            background: #0077cc;
-            color: white;
-            padding: 10px 20px;
-        }
+    /* Header & Navigation */
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 10px 20px;
+    }
 
-        .header-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-        }
+    .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .logo {
-            height: 60px;
-            max-width: 100%;
-        }
+    .logo {
+      height: 60px;
+      max-width: 100%;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        nav li {
-            margin: 5px 10px;
-        }
+    nav li {
+      margin: 5px 10px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        nav a:hover,
-        nav a.active {
-            text-decoration: underline;
-        }
+    nav a:hover,
+    nav a.active {
+      text-decoration: underline;
+    }
 
-        /* Main content */
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
+    /* Main content */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      text-align: center;
+    }
 
-        h1 {
-            color: #0077cc;
-            margin-bottom: 20px;
-        }
+    h1 {
+      color: #0077cc;
+      margin-bottom: 30px;
+    }
 
-        p {
-            font-size: 1.2em;
-            color: #333;
-        }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        footer {
-            background: #0077cc;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-        }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
 
-        /* Responsive tweaks */
-        @media (max-width: 600px) {
-            .logo {
-                height: 50px;
-                margin: 0 auto;
-                display: block;
-            }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
+    footer {
+      background: #0077cc;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
 
-            nav li {
-                margin: 8px 0;
-            }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .logo {
+        height: 50px;
+        margin: 0 auto;
+        display: block;
+      }
 
-            main {
-                padding: 40px 10px;
-            }
-        }
-    </style>
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav li {
+        margin: 8px 0;
+      }
+
+      main {
+        padding: 20px 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="index.html"><img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="documents.html">Documents</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container header-content">
+      <a href="index.html"><img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <h1>Community Gallery</h1>
-        <p>Our community photo gallery will be available soon. Please check back later.</p>
-    </main>
+  <main>
+    <h1>Community Gallery</h1>
 
-    <footer>
-        <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
-    </footer>
+    <div class="gallery">
+      <img src="images/photo19.HEIC" alt="Neighborhood View 1">
+     <!--   
+      <img src="images/gallery/photo1.jpg" alt="Neighborhood View 1">
+      <img src="images/gallery/photo2.jpg" alt="Neighborhood View 2">
+      <img src="images/gallery/photo3.jpg" alt="Neighborhood View 3">
+      <img src="images/gallery/photo4.jpg" alt="Neighborhood View 4">
+      <img src="images/gallery/photo5.jpg" alt="Neighborhood View 5">
+      <img src="images/gallery/photo6.jpg" alt="Neighborhood View 6">
+        -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+  </footer>
 </body>
 </html>
