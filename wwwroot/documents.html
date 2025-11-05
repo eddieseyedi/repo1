@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,46 @@
             background: #f4f4f4;
         }
 
-        header, footer {
+        /* Header & Navigation */
+        header {
             background: #0077cc;
             color: white;
-            padding: 15px 20px;
-            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-wrap: wrap; /* allows content to adjust on small screens */
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 60px;
+            max-width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap; /* wraps menu items on small screens */
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 5px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         main {
@@ -47,36 +82,78 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-            .document-card h3 {
-                margin-top: 0;
-                margin-bottom: 5px;
-                font-size: 1.1em;
+        .document-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .document-card p {
+            margin: 0 0 10px 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .document-card a {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .document-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #0077cc;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        /* --- Responsive Tweaks for Phones --- */
+        @media (max-width: 600px) {
+            .logo {
+                height: 50px;
+                margin: 0 auto;
+                display: block;
             }
 
-            .document-card p {
-                margin: 0 0 10px 0;
-                color: #555;
-                font-size: 0.95em;
+            nav ul {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .document-card a {
-                color: #0077cc;
-                text-decoration: none;
-                font-weight: bold;
+            nav li {
+                margin: 8px 0;
             }
 
-                .document-card a:hover {
-                    text-decoration: underline;
-                }
+            main {
+                padding: 20px 10px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>HOA Documents</h1>
+        <div class="container header-content">
+            <img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <h1>HOA Documents</h1>
         <p style="text-align:center; margin-bottom:40px;">
             Welcome! Here you can find important HOA documents, including meeting minutes, financial reports, and forms. Click the links below to download.
         </p>
@@ -109,13 +186,12 @@
             <div class="document-list">
                 <div class="document-card">
                     <h3>ACH Form</h3>
-                    <p>PDF | 1 pages</p>
-                    <p>ACH form is not avaialbe at this time.</p>
-<!--                    <a href="documents/ACH Form.docx" target="_blank">Download</a> -->
+                    <p>PDF | 1 page</p>
+                    <p>ACH form is not available at this time.</p>
+                    <!-- <a href="documents/ACH Form.docx" target="_blank">Download</a> -->
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer>
@@ -124,6 +200,3 @@
 
 </body>
 </html>
-
-
-
