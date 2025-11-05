@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - SitusPlace</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Situs Place HOA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-box p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .email-button {
+            display: inline-block;
+            background-color: #0077cc;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .email-button:hover {
+            background-color: #005fa3;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="images/situs-place-sign.jpg" alt="SitusPlace Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>Contact Us</h1>
-    <p>You can list contact details or add a form here later.</p>
-  </main>
-  <footer>
-    <p>© 2025 SitusPlace. All rights reserved.</p>
-  </footer>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html"><img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-box">
+            <h1>Contact Situs Place HOA</h1>
+            <p>Have a question, suggestion, or concern? We’d love to hear from you!</p>
+            <p>You can reach us directly by clicking the button below:</p>
+
+            <a href="mailto:situsplace66214@gmail.com" class="email-button">Send Email</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+    </footer>
 </body>
 </html>
