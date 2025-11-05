@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community News - Situs Place HOA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 60px;
+            max-width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 5px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0077cc;
+        }
+
+        .news-article {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .news-article h2 {
+            margin-top: 0;
+            color: #0077cc;
+        }
+
+        .date {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #0077cc;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 600px) {
+            .logo {
+                height: 50px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 8px 0;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html"><img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Community News</h1>
+
+        <!-- Example News Item 1 -->
+        <div class="news-article">
+            <h2>Fall Neighborhood Cleanup Day</h2>
+            <p class="date">October 15, 2025</p>
+            <p>Join your neighbors for our annual fall cleanup! We’ll meet at the community entrance at 9:00 AM to pick up litter and tidy up common areas. Trash bags and gloves will be provided. Refreshments and snacks available afterward.</p>
+        </div>
+
+        <!-- Example News Item 2 -->
+        <div class="news-article">
+            <h2>Upcoming HOA Meeting</h2>
+            <p class="date">November 12, 2025</p>
+            <p>Our next HOA board meeting will take place at 7:00 PM in the clubhouse. All residents are welcome to attend. We’ll discuss upcoming maintenance projects and review the annual budget.</p>
+        </div>
+
+        <!-- Example News Item 3 -->
+        <div class="news-article">
+            <h2>Holiday Decoration Contest</h2>
+            <p class="date">December 1, 2025</p>
+            <p>Get ready to spread some holiday cheer! The annual decoration contest begins December 1st. Prizes will be awarded for the most festive and creative homes. Judging will take place the week of December 18th.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+    </footer>
+</body>
+</html>
