@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOA Members Area</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f7f7f7;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: bold;
+    }
+    main {
+      background: white;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HOA Members Portal</h1>
+    <div>
+      <a id="loginBtn" href="/.auth/login/github">Sign in</a>
+      <a id="logoutBtn" href="/.auth/logout" style="display:none;">Sign out</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <p>Checking sign-in status...</p>
+  </main>
+
+  <script>
+    async function checkAuth() {
+      const res = await fetch('/.auth/me', { credentials: 'include' });
+      if (!res.ok) {
+        document.getElementById('content').innerHTML =
+          '<p>You must <a href="/.auth/login/github">sign in</a> to view this page.</p>';
+        return;
+      }
+      const data = await res.json();
+      if (data && data.length > 0) {
+        const user = data[0].user_details || "Member";
+        document.getElementById('loginBtn').style.display = 'none';
+        document.getElementById('logoutBtn').style.display = 'inline';
+        document.getElementById('content').innerHTML = `
+          <h2>Welcome, ${user}</h2>
+          <p>Here are your members-only resources:</p>
+          <ul>
+            <li><a href="/members/meeting-minutes.pdf">Meeting Minutes</a></li>
+            <li><a href="/members/forms/dues-form.pdf">Dues Payment Form</a></li>
+          </ul>
+        `;
+      } else {
+        document.getElementById('content').innerHTML =
+          '<p>You must <a href="/.auth/login/github">sign in</a> to view this page.</p>';
+      }
+    }
+
+    checkAuth();
+  </script>
+</body>
+</html>
