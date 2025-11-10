@@ -1,29 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Old Photos</title>
-<style>
-  body { text-align:center; font-family:sans-serif; background:#fafafa; }
-  .gallery img { width:220px; height:160px; margin:8px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Photos - Situs Place HOA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0077cc;
+      margin: 30px 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a.back {
+      display: inline-block;
+      margin: 20px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0077cc;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      main, .gallery {
+        padding: 0 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-<h1>Old Photos</h1>
-<div class="gallery" id="gallery"></div>
-<p><a href="../gallery.html">← Back to Gallery</a></p>
+  <h1>Old Photos</h1>
+  <a class="back" href="../gallery.html">&larr; Back to Gallery</a>
 
-<script>
-// Automatically list images: old1.jpg, old2.jpg, old3.jpg ...
-const gallery = document.getElementById("gallery");
-for (let i = 1; i <= 20; i++) { // change 20 to however many you have
-  const img = document.createElement("img");
-  img.src = `old${i}.jpg`;
-  img.alt = `Old Photo ${i}`;
-  img.onerror = () => img.remove(); // hide missing ones
-  gallery.appendChild(img);
-}
-</script>
+  <div class="gallery" id="oldGallery"></div>
+
+  <footer>
+    <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Array of old photos in oldphotos/ folder
+    const oldImages = [
+      "photo1.jpg",
+      "photo2.jpg",
+      "photo3.jpg",
+      "photo4.jpg",
+      "photo5.jpg"
+      "photo6.jpg",
+      "photo7.jpg",
+      "photo8.jpg",
+      "photo9.jpg",
+      "photo10.jpg"
+      "photo11.jpg"
+      "photo12.jpg"
+      "photo13.jpg"
+      "photo14.jpg"
+      "photo15.jpg"
+      "photo16.jpg"
+      "photo17.jpg"
+      "photo18.jpg"
+      "photo19.jpg"
+      "photo20.jpg"
+      // Add all old photo filenames here
+    ];
+
+    const galleryDiv = document.getElementById('oldGallery');
+
+    oldImages.forEach(file => {
+      const img = document.createElement('img');
+      img.src = file; // same folder
+      img.alt = file;
+      galleryDiv.appendChild(img);
+    });
+  </script>
 </body>
 </html>
