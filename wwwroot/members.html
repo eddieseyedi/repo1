@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Members Area - Situs Place HOA</title>
-<script>
-  // Check if user logged in
-  if (sessionStorage.getItem("memberAccess") !== "true") {
-    window.location.href = "login.html";
-  }
-</script>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Area - Situs Place HOA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .members-content {
+            background-color: white;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .members-content h2 {
+            color: #003366;
+        }
+
+        .logout-btn {
+            background-color: #005fa3;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .logout-btn:hover {
+            background-color: #0078D7;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome, Situs Place Members</h1>
-  <p>This page is for HOA members only.</p>
-  <p><a href="#" onclick="logout()">Logout</a></p>
+<header>
+    <div class="container header-content">
+        <h1>Members Area</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-  <script>
-    function logout() {
-      sessionStorage.removeItem("memberAccess");
-      window.location.href = "login.html";
-    }
-  </script>
+<div class="members-content container">
+    <button class="logout-btn" onclick="logout()">Logout</button>
+    <h2>Welcome, Member!</h2>
+    <p>This page is restricted to HOA members only. Here you can find documents, announcements, and updates specific to Situs Place HOA members.</p>
+    
+    <ul>
+        <li><a href="documents/meeting-minutes.pdf" target="_blank">Meeting Minutes</a></li>
+        <li><a href="documents/budget-2025.pdf" target="_blank">2025 HOA Budget</a></li>
+        <li><a href="documents/rules.pdf" target="_blank">Community Rules</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+</footer>
+
+<script>
+if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+}
+
+function logout() {
+    sessionStorage.removeItem('isLoggedIn');
+    window.location.href = 'login.html';
+}
+</script>
 </body>
 </html>
