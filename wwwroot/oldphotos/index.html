@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Old Photos</title>
+<style>
+  body { text-align:center; font-family:sans-serif; background:#fafafa; }
+  .gallery img { width:220px; height:160px; margin:8px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
+</style>
+</head>
+<body>
+<h1>Old Photos</h1>
+<div class="gallery" id="gallery"></div>
+<p><a href="../gallery.html">← Back to Gallery</a></p>
+
+<script>
+// Automatically list images: old1.jpg, old2.jpg, old3.jpg ...
+const gallery = document.getElementById("gallery");
+for (let i = 1; i <= 20; i++) { // change 20 to however many you have
+  const img = document.createElement("img");
+  img.src = `old${i}.jpg`;
+  img.alt = `Old Photo ${i}`;
+  img.onerror = () => img.remove(); // hide missing ones
+  gallery.appendChild(img);
+}
+</script>
+</body>
+</html>
