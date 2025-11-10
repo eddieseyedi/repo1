@@ -79,7 +79,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const user = document.getElementById('username').value.trim().toLowerCase();
-    const pass = document.getElementById('password').value.trim().tolowerCase();
+    const pass = document.getElementById('password').value;
 
     // Define all users and passwords here
     const users = {
