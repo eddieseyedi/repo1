@@ -1,105 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Members Login - Situs Place HOA</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Login - Situs Place HOA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            text-align: center;
+        }
 
-  .login-box {
-    background: white;
-    padding: 35px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 320px;
-    text-align: center;
-  }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+        }
 
-  h2 {
-    color: #333;
-    margin-bottom: 25px;
-  }
+        .btn-login {
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
-  input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    font-size: 15px;
-  }
+        .btn-login:hover {
+            background-color: #005fa3;
+        }
 
-  button {
-    width: 95%;
-    padding: 10px;
-    background: #0078D7;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background: #005fa3;
-  }
-
-  #message {
-    color: red;
-    margin-top: 10px;
-    height: 20px;
-  }
-
-  footer {
-    margin-top: 25px;
-    font-size: 13px;
-    color: #777;
-  }
-</style>
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <div class="container header-content">
+        <h1>Situs Place HOA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-<div class="login-box">
-  <h2>Members Login</h2>
-  <input type="text" id="userid" placeholder="User ID" autocomplete="off">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="checkLogin()">Login</button>
-  <p id="message"></p>
-  <footer>Situs Place HOA</footer>
+<div class="login-container">
+    <h2>Members Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="User ID" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="submit" class="btn-login">Login</button>
+        <p class="error" id="errorMsg"></p>
+    </form>
 </div>
 
+<footer>
+    <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+</footer>
+
 <script>
-  // List of valid users and passwords
-  const users = {
-    "president": "hoa2025",
-    "secretary": "minutes123",
-    "member": "situs2025"
-  };
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  function checkLogin() {
-    const id = document.getElementById('userid').value.trim().toLowerCase();
-    const pw = document.getElementById('password').value;
-    const msg = document.getElementById('message');
+    const user = document.getElementById('username').value.trim();
+    const pass = document.getElementById('password').value.trim();
 
-    if (users[id] && users[id] === pw) {
-      sessionStorage.setItem("memberAccess", "true");
-      sessionStorage.setItem("memberUser", id);
-      msg.textContent = "";
-      window.location.href = "members.html";
+    if (user === 'A' && pass === '1') {
+        sessionStorage.setItem('isLoggedIn', 'true');
+        window.location.href = 'members.html';
     } else {
-      msg.textContent = "Invalid User ID or Password.";
-      setTimeout(() => msg.textContent = "", 3000); // Clear after 3 seconds
+        document.getElementById('errorMsg').textContent = 'Invalid User ID or Password';
     }
-  }
+});
 </script>
-
 </body>
 </html>
