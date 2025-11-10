@@ -115,6 +115,14 @@
         padding: 20px 10px;
       }
     }
+
+    .old-photos-link {
+      display: inline-block;
+      margin: 20px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -125,7 +133,6 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-<!--          <li><a href="news.html">News</a></li>    -->
           <li><a href="documents.html">Documents</a></li>
           <li><a href="gallery.html" class="active">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -136,55 +143,49 @@
 
   <main>
     <h1>Community Gallery</h1>
+    <a href="oldphotos/index.html" class="old-photos-link">&larr; View Old Photos</a>
 
-    <div class="gallery">
-      <img src="images/photo1.jpg" alt="Neighborhood View 1">
-      <img src="images/photo2.jpg" alt="Neighborhood View 2">
-      <img src="images/photo3.jpg" alt="Neighborhood View 3">
-      <img src="images/photo4.jpg" alt="Neighborhood View 4">
-      <img src="images/photo5.jpg" alt="Neighborhood View 5">
-      <img src="images/photo6.jpg" alt="Neighborhood View 6">
-      <img src="images/photo7.jpg" alt="Neighborhood View 7">
-      <img src="images/photo8.jpg" alt="Neighborhood View 8">
-      <img src="images/photo9.jpg" alt="Neighborhood View 9">
-      <img src="images/photo10.jpg" alt="Neighborhood View 10">
-      <img src="images/photo11.jpg" alt="Neighborhood View 11">
-      <img src="images/photo12.jpg" alt="Neighborhood View 12">
-      <img src="images/photo13.jpg" alt="Neighborhood View 13">
-      <img src="images/photo14.jpg" alt="Neighborhood View 14">
-      <img src="images/photo15.jpg" alt="Neighborhood View 15">
-      <img src="images/photo16.jpg" alt="Neighborhood View 16">
-      <img src="images/photo17.jpg" alt="Neighborhood View 17">
-      <img src="images/photo18.jpg" alt="Neighborhood View 18">
-      <img src="images/photo19.jpg" alt="Neighborhood View 19">
-      <img src="images/photo20.jpg" alt="Neighborhood View 20">
-      <img src="images/photo21.jpg" alt="Neighborhood View 21">
-      <img src="images/photo22.jpg" alt="Neighborhood View 22">
-      <img src="images/photo23.jpg" alt="Neighborhood View 23">
-      <img src="images/photo24.jpg" alt="Neighborhood View 24">
-      <img src="images/photo25.jpg" alt="Neighborhood View 25">
-      <img src="images/photo26.jpg" alt="Neighborhood View 26">
-      <img src="images/photo27.jpg" alt="Neighborhood View 27">
-      <img src="images/photo28.jpg" alt="Neighborhood View 28">
-      <img src="images/photo29.jpg" alt="Neighborhood View 29">
-      <img src="images/photo30.jpg" alt="Neighborhood View 30">
-      <img src="images/photo31.jpg" alt="Neighborhood View 31">
-      <img src="images/photo32.jpg" alt="Neighborhood View 32">
-      <img src="images/photo33.jpg" alt="Neighborhood View 33">
-      <img src="images/photo34.jpg" alt="Neighborhood View 34">
-      <img src="images/photo35.jpg" alt="Neighborhood View 35">
-      <img src="images/photo36.jpg" alt="Neighborhood View 36">
-      <img src="images/photo37.jpg" alt="Neighborhood View 37">
-      <img src="images/photo38.jpg" alt="Neighborhood View 38">
-      <img src="images/photo39.jpg" alt="Neighborhood View 39">
-      <img src="images/photo40.jpg" alt="Neighborhood View 40">
-
-      
-    </div>
+    <div class="gallery" id="gallery"></div>
   </main>
 
   <footer>
     <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Array of new images in images/ folder
+    const images = [
+      "IMG_3351.jpg",
+      "IMG_3353.jpg",
+      "IMG_3354.jpg",
+      "IMG_3355.jpg",
+      "IMG_3356.jpg",
+      "IMG_3357.jpg",
+      "IMG_3358.jpg",
+      "IMG_3359.jpg",
+      "IMG_3360.jpg",
+      "IMG_4217.jpeg",
+      "IMG_4218.jpeg",
+      "photo12.jpg",
+      "photo13.jpg",
+      "photo14.jpg",
+      "photo15.jpg",
+      "photo16.jpg",
+      "photo17.jpg",
+      "photo18.jpg",
+      "photo19.jpg",
+      "photo20.jpg"
+      // Add more new filenames here as needed
+    ];
+
+    const galleryDiv = document.getElementById('gallery');
+
+    images.forEach(file => {
+      const img = document.createElement('img');
+      img.src = `images/${file}`;
+      img.alt = file;
+      galleryDiv.appendChild(img);
+    });
+  </script>
 </body>
 </html>
