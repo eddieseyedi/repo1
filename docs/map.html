@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 60px;
+            max-width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 5px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .group-section {
+            margin-bottom: 40px;
+        }
+
+        .group-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .address-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px 30px;
+        }
+
+            .address-grid div {
+                padding: 4px 0;
+            }
+
+        footer {
+            background: #0077cc;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                height: 50px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 8px 0;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <img src="images/situs-place-sign.jpg" alt="Situs Place Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Group Details</h1>
+        <p style="text-align:center; margin-bottom:40px;">
+            Use the information below to determine which group your home belongs to.
+        </p>
+
+        <!-- Group A -->
+        <div class="group-section">
+            <h2>Group A</h2>
+            <div class="group-card">
+                <div class="address-grid">
+                    <div>11204 Ter</div><div>11208 Ter</div>
+                    <div>11328 Ter</div><div>11332 Ter</div>
+                    <div>11404 Ter</div><div>11408 Ter</div>
+                    <div>11311 Ter</div><div>11314 Place</div>
+                    <div>11321 Ter</div><div>11322 Place</div>
+                    <div>11327 Ter</div><div>11326 Place</div>
+                    <div>11335 Ter</div><div>11334 Place</div>
+                    <div>11321 Place</div><div>11325 Place</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Group B -->
+        <div class="group-section">
+            <h2>Group B</h2>
+            <div class="group-card">
+                <div class="address-grid">
+                    <div>11220 Ter</div><div>11224 Ter</div>
+                    <div>11312 Ter</div><div>11316 Ter</div>
+                    <div>11403 Ter</div><div>11406 Place</div>
+                    <div>11205 Place</div><div>11209 Place</div>
+                    <div>11213 Place</div><div>11217 Place</div>
+                    <div>11221 Place</div><div>11225 Place</div>
+                    <div>11229 Place</div><div>11233 Place</div>
+                    <div>11329 Place</div><div>11333 Place</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Situs Place HOA. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
