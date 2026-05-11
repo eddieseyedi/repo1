@@ -38,6 +38,23 @@
         .announcement-card a:hover {
             text-decoration: underline;
         }
+.picnic-garage-container {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    align-items: stretch;
+}
+
+.picnic-garage-container .announcement-card {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .picnic-garage-container {
+        flex-direction: column;
+    }
+}        
     </style>
 </head>
 <body>
