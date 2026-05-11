@@ -14,25 +14,6 @@ body {
     margin: 0 auto;
 }
 
-.picnic-garage-container {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 40px;
-    align-items: stretch;
-}
-
-/* garage sale and picnic */
-.picnic-garage-container .announcement-card {
-    flex: 1;
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .picnic-garage-container {
-        flex-direction: column;
-    }
-}
-
 /* Header */
 header {
     background-color: #003366;
