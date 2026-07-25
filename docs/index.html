@@ -38,6 +38,18 @@
         .announcement-card a:hover {
             text-decoration: underline;
         }
+    .announcement-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .announcement-grid {
+            grid-template-columns: 1fr;
+        }
+    }        
         
     </style>
 </head>
@@ -73,52 +85,48 @@
 <section class="container">
     <div class="announcement-card">
         <h2>📢 2026 Annual Meeting</h2>
-
         <p>
-            The Board of Directors invites all homeowners to attend the
-            <strong>2026 Situs Place Homeowners Association Annual Meeting.</strong>
-            This meeting is an opportunity to learn about the Association,
-            hear updates from the Board, review the financial status of the
-            community, and participate in discussions about the future of
-            Situs Place.
+            <strong>Saturday, November 7, 2026</strong><br>
+            10:30 AM<br>
+            Shawnee Civic Center
         </p>
 
-        <h3>Meeting Details</h3>
-        <ul>
-            <li><strong>Date:</strong> Saturday, November 7, 2026</li>
-            <li><strong>Time:</strong> 10:30 AM</li>
-            <li><strong>Location:</strong> Shawnee Civic Center</li>
-            <li><strong>Breakfast:</strong> Continental breakfast will be served beginning at 10:30 AM.</li>
-        </ul>
         <p>
-            We encourage every homeowner to attend. Your participation and
-            input help make Situs Place a stronger community.
+            Continental breakfast will be served beginning at 10:30 AM.
+            We encourage every homeowner to attend.
         </p>
     </div>
 </section>
 <!-- End HOA Annual Meeting Announcement -->
-
-    <!-- Summer picnic -->
-    <section class="summer-picnic">
-        <div class="container">
-             <h2>🌞 RE-SCHEDULED PICNIC – Sunday September 13, 2026, 1:00 p.m.</h2>    
-             <p>Join your neighbors for a fun and relaxing afternoon at our upcoming <strong>Situs Place HOA Community Picnic</strong> on <strong>Sunday, September 13</strong>!</p>
-             <p>This is a wonderful opportunity to meet neighbors, enjoy great food, and spend time together as a community.</p>
-             <ul>
-                 <li>🍔 Burgers and hot dogs will be provided.</li>
-                 <li>🍦 Häagen-Dazs ice cream will also be provided.</li>
-                 <li>🥗 Please bring a side dish to share.</li>
-                 <li>🪑 Don’t forget to bring your own lawn chair or outdoor seating.</li>
-             </ul>
-
-             <p>We look forward to seeing everyone there and sharing a fun summer afternoon together with our wonderful community!</p>
-        </div>
-    </section>
-    
-<!-- Resident Group Directory -->
+<!-- Picnic and Group Directory -->
 <section class="container">
-    <div class="announcement-card">
-        <h2>🏡 Resident Group Directory</h2>
+    <div class="announcement-grid">
+
+        <!-- Picnic -->
+        <div class="announcement-card">
+            <h2>🌞 Community Picnic</h2>
+
+            <p>
+                Join your neighbors on
+                <strong>Sunday, September 13, 2026</strong>
+                at <strong>1:00 PM</strong> for a fun afternoon together.
+            </p>
+
+            <ul>
+                <li>🍔 Burgers & Hot Dogs Provided</li>
+                <li>🍦 Häagen-Dazs Ice Cream</li>
+                <li>🥗 Bring a Side Dish</li>
+                <li>🪑 Bring Your Lawn Chair</li>
+            </ul>
+
+            <p>
+                We look forward to seeing everyone!
+            </p>
+        </div>
+
+        <!-- Resident Groups -->
+        <div class="announcement-card">
+            <h2>🏡 Resident Group Directory</h2>
         <p>
             To find out which group your home is in, please check the
             <strong>Directory Map</strong> in the printed community directory,
@@ -129,10 +137,11 @@
             The online directory includes each group and the homes assigned
             to it, making it easy to identify your group.
         </p>
+
+        </div>
     </div>
 </section>
-<!-- End Resident Group Directory -->
-    
+        
     <!-- End of the section Eddie -->
     
     <!-- News Section -->
